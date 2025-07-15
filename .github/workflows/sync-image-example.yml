@@ -26,7 +26,7 @@ jobs:
         logout: false
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
-         skopeo copy hub.docker.com/r/netflixoss/eureka:latest docker://registry.cn-hangzhou.aliyuncs.com/guigusuqi/eureka:latest
-         skopeo copy hub.docker.com/r/netflixoss/eureka:latest docker://registry.cn-hangzhou.aliyuncs.com/guigusuqi/eureka:latest
+         #skopeo copy hub.docker.com/r/netflixoss/eureka:latest docker://registry.cn-hangzhou.aliyuncs.com/guigusuqi/eureka:latest
+         skopeo copy docker://docker.io/zookeeper:3.7 docker://registry.cn-hangzhou.aliyuncs.com/guigusuqi/zookeeper:latest
          #skopeo copy docker://docker.io/zookeeper:3.7 docker://registry.cn-hangzhou.aliyuncs.com/guigusuqi/nginx:latest
       # 使用 skopeo 工具将镜像同步到阿里云个人仓库中，使用时请自行源和目标修改仓库名称和镜像名称
